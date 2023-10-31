@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+// class animated image 
 public class AnimatedImage : MonoBehaviour
 {
     public Image sr { get; private set; }
@@ -44,7 +44,7 @@ public class AnimatedImage : MonoBehaviour
         }
     }
 
-    public void Restart() // starts animation
+    public void Restart() // starts animation on the game 
     {
         animationFrame = -1;
 
