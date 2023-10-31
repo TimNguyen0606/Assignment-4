@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+// the class that deals with movemnts of the player 
 public class Movement : MonoBehaviour
 {
     public Rigidbody2D rigidBody { get; private set; }

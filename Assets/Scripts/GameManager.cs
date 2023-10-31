@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+// ghost movement manager 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
@@ -276,7 +276,7 @@ public class GameManager : MonoBehaviour
         SubtractLivesIcon();
         skipRoundPause = false;
 
-        while (true) // At end of this loop, the game timescale is set to normal and the game begins
+        while (true) // At  pacman, ghosts, and pellets end of this loop, the game timescale is set to normal and the game begins
         {
             float pauseEndTime = Time.realtimeSinceStartup + secondDelay;
             while (Time.realtimeSinceStartup < pauseEndTime)
@@ -299,7 +299,7 @@ public class GameManager : MonoBehaviour
         NewRound();
     }
 
-    private void NewRound() // Set pacman, ghosts, and pellets to be active
+    private void NewRound() // Set all to be active
     {
         foreach (Transform pellet in pellets)
         {
