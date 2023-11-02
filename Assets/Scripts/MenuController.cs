@@ -275,7 +275,7 @@ public class MenuController : MonoBehaviour
         StartCoroutine(FadeTextToPartialAlpha(1.5f, anyKeyText));
     }
 
-    private IEnumerator LerpObject(float timeOfTravel, GameObject gameObject, Vector3 startPosition, Vector3 endPosition) // https://answers.unity.com/questions/1240045/how-to-smoothly-move-object-with-recttransform.html
+    private IEnumerator LerpObject(float timeOfTravel, GameObject gameObject, Vector3 startPosition, Vector3 endPosition) 
     {
         float currentTime = 0;
         float normalizedValue;
@@ -291,7 +291,7 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeTextToFullAlpha(float t, Text i) // https://forum.unity.com/threads/fading-in-out-gui-text-with-c-solved.380822/
+    public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0.1f);
         while (i.color.a < 1.0f)
@@ -302,7 +302,7 @@ public class MenuController : MonoBehaviour
         StartCoroutine(FadeTextToPartialAlpha(1.5f, anyKeyText));
     }
 
-    public IEnumerator FadeTextToPartialAlpha(float t, Text i) // https://forum.unity.com/threads/fading-in-out-gui-text-with-c-solved.380822/
+    public IEnumerator FadeTextToPartialAlpha(float t, Text i) 
     {
         i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
         while (i.color.a > 0.1f)
@@ -344,7 +344,7 @@ public class MenuController : MonoBehaviour
 
     private void StartGame() // loads game scene
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("StartScene");
     }
 
     private void SetupStats()
