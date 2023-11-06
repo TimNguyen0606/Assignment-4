@@ -359,7 +359,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(returnToMenuTime);
 
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("titleScene");
     }
 
     private void SetScore(int score)
